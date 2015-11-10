@@ -1,5 +1,6 @@
 'use strict'
 
+
 var express = require('express');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
@@ -9,6 +10,7 @@ var marked = require('marked');
 var app = express();
 app.set('view engine', 'jade');
 
+var port = process.env.PORT || 3000;
 
 
 //middleware
@@ -30,4 +32,4 @@ app.get('/',function(req,res){
 });
 
 
-app.listen(3000);
+app.listen(port);
