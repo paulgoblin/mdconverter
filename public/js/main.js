@@ -1,7 +1,17 @@
 'use strict'
 
 function init() {
-  $('.render').click(renderMarkup)
+  // $('.render').click(renderMarkup)
+  $('textarea').on('keydown',debounce);
+
+}
+
+function debounce () {
+  $('textarea').off('keydown',debounce);
+  window.setTimeout(function(){
+    $('textarea').on('keydown',debounce);
+    renderMarkup();
+  },1000)
 }
 
 function renderMarkup(){
@@ -30,9 +40,6 @@ function renderMarkup(){
     if (err) console.log('error posting mrkdwn: ', err);
   })
 }
-
-
-
 
 
 $(document).ready(init)

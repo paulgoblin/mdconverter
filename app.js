@@ -21,7 +21,6 @@ app.use(express.static('public'))
 //api
 app.post('/render', function(req,res) {
   var markdown = req.body.markdown;
-  console.log('req markdown: ', markdown)
   res.send(marked(markdown))
 })
 
