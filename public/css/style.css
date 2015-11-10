@@ -17,6 +17,7 @@
 }
 
 #rendered {
+  text-align: left;
   margin: 2em 1em 2em 0em;
   overflow-y: scroll;
 }
