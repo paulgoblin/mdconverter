@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    title Render your markdown
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet')
+    link(rel="stylesheet", href="https://bootswatch.com/readable/bootstrap.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+    link(href='/css/style.css', rel='stylesheet')
+  body
+    .container
+    .row
+      .col.col-xs-12
+      #markdown.col.col-xs-6
+        h3 Markdown
+        #inputCont
+          textarea.markdown( rows=4 placeholder="Put your markdown here")
+      #html.col.col-xs-6
+        h3 Rendered!
+        #rendered
+      #buttonDiv.col.col-xs-12
+        button.render.btn
+          i.fa.fa-long-arrow-right.
+          span Render
+          i.fa.fa-long-arrow-right
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='/js/main.js')

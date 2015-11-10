@@ -1,0 +1,48 @@
+.col {
+  /*border: 1px solid black;*/
+}
+
+#markdown, #html {
+  text-align: center;
+}
+#inputCont, #rendered {
+  border: 2px solid #ddd;
+  border-radius: 4px; 
+  height: 70vh;
+}
+
+#inputCont{
+  
+  margin: 2em 0em 2em 1em;
+}
+
+#rendered {
+  margin: 2em 1em 2em 0em;
+  overflow-y: scroll;
+}
+
+textarea {
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  width:100%;
+  height: 100%;
+  outline: none;
+  padding: 0.5em; 
+}
+
+#rendered {
+  padding: 0.5em; 
+}
+
+.container{
+  padding: 0em;
+}
+
+#buttonDiv {
+  text-align: center;
+}
+
+i {
+  padding: 0 1em;
+}
