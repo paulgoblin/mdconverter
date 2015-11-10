@@ -27,12 +27,9 @@ function renderMarkup(){
     data: JSON.stringify( {markdown: markdown} )
   };
 
-  console.log('opts: ', options)
   $.ajax(options)
   .done(function(data){
-    console.log('mkrdwn response: ', data);
     var $convertedHtml = $.parseHTML(data);
-    console.log('convertedhtml', $convertedHtml)
     $('#rendered').empty().append($convertedHtml);
 
   })
