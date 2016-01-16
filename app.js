@@ -14,9 +14,10 @@ var port = process.env.PORT || 3000;
 
 
 //middleware
-app.use(bodyParser.urlencoded({ extended: true }));   // access form data
-app.use(bodyParser.json())  // access json data
-app.use(express.static('public'))
+app.use( morgan('combined') );
+app.use( bodyParser.urlencoded( { extended: true } ) );   // access form data
+app.use( bodyParser.json() )  // access json data
+app.use( express.static('public') )
 
 //api
 app.post('/render', function(req,res) {

@@ -1,9 +1,7 @@
 'use strict'
 
 function init() {
-  // $('.render').click(renderMarkup)
   $('textarea').on('keydown',debounce);
-
 }
 
 function debounce () {
@@ -31,13 +29,11 @@ function renderMarkup(){
   .done(function(data){
     var $convertedHtml = $.parseHTML(data);
     $('#rendered').empty().append($convertedHtml);
-
   })
   .fail(function(err){
     if (err) console.log('error posting mrkdwn: ', err);
   })
 }
-
 
 $(document).ready(init)
 
